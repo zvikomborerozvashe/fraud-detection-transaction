@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Credit Fraud Detection</h2>
+<p>Enter features (Time, Amount, V1, V2, ..., V28):</p>
+<form method="POST" action="{{ url_for('credit_fraud') }}" class="form-container">
+    <div class="form-group">
+        <label for="features">Enter features:</label>
+        <input 
+            type="text" 
+            name="features" 
+            id="features"
+            placeholder="Time, Amount, V1, V2, ..., V28" 
+            required 
+            value="{{ features_input if features_input else '' }}">
+    </div>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

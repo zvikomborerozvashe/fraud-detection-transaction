@@ -1,0 +1,12 @@
+# Track large files with Git LFS
+*.pkl filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+
+# Ignore Python bytecode and virtual environment
+*.pyc           text eol=lf
+__pycache__/     directory
+venv/            directory
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f63ffb2fe970417c0a6849cfe5f2ed02cf14a331704660d8e68d3eafb48348e
+version https://git-lfs.github.com/spec/v1
+oid sha256:023936c752b0fc63b2d0e87b720fe328b900cd32e5fc40ee0c4b9c77fb0c40f2

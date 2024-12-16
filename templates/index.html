@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome to the <span class="green">T</span>rust<span class="green">X</span>pert Fraud Detection System</h2>
+<p>Select an option to detect fraud:</p>
+<div class="dropdown">
+    <button class="dropbtn">Select Fraud Detection</button>
+    <div class="dropdown-content">
+        <a href="{{ url_for('credit_fraud') }}">Credit Fraud Detection</a>
+        <a href="{{ url_for('upi_fraud') }}">UPI Fraud Detection</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>UPI Fraud Detection</h2>
+<p>Fill the form with transaction data to detect fraud.</p>
+<form method="POST" action="{{ url_for('upi_fraud') }}" class="form-container">
+    <div class="form-group">
+        <label for="Date">Date:</label>
+        <input type="text" id="Date" name="Date" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Category">Category:</label>
+        <input type="text" id="Category" name="Category" required>
+    </div>
+
+    <div class="form-group">
+        <label for="RefNo">RefNo:</label>
+        <input type="text" id="RefNo" name="RefNo" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Date1">Date1:</label>
+        <input type="text" id="Date1" name="Date1" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Withdrawal">Withdrawal:</label>
+        <input type="text" id="Withdrawal" name="Withdrawal" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Deposit">Deposit:</label>
+        <input type="text" id="Deposit" name="Deposit" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Balance">Balance:</label>
+        <input type="text" id="Balance" name="Balance" required>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
